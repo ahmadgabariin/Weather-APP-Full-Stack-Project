@@ -1,0 +1,102 @@
+body{
+    margin: 0px;
+    background-color: #091F43;
+}
+
+#container{
+    margin: 2vw;
+}
+
+#btn-city-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: #FF1F42;
+    color: white;
+    border-radius: 1vw;
+}
+
+#grid-header {
+    display: grid;
+    grid-template-columns: 50% 17%;
+    column-gap: 3%;
+    justify-content: center;
+}
+
+input {
+    padding-left: 0.5vw;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+#grid-body {
+    margin-top : 4% ;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 3%;
+    row-gap: 2vh;
+    justify-content: center;
+}
+
+.city {
+    display: grid;
+   justify-items: center;
+   
+}
+
+.city-name {
+  margin-top: 1vh;
+}
+
+.city-temp {
+    margin-top: 1vh; 
+}
+
+.weather-icon {
+    width: 6vw;
+    height: 5vh;
+
+}
+
+.btn-city-save {
+    background-color: green;
+    border-radius: 50%;
+    
+}
+
+.btn-city-delete {
+    margin-top: 1vh;
+    background-color: red;
+    border-radius: 50%;
+    
+}
+
+.city > span{
+    color:#091F43 ;
+    font-size: xx-large;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white;
+  }
+
+
+.city-container {
+    display: grid;
+    grid-template-columns: 80% 10%;
+    background-color:white;
+    box-shadow: 2px 8px rgba(255, 255, 255, 0.5);
+    padding: 4vw;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.btn-refresh {
+    background: none;
+    font-size: xx-large;
+    color: #091F43;
+    border: none;
+}

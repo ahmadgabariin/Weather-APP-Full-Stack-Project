@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/3aec39024d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script id="cities-weather-template" type="text/x-handlebars-template">
+        {{#each citiesWeatherData}}
+        <div class="city-container">
+            <div class="city" data-id="{{_id}}">
+                {{#if _id}}
+                {{else}}
+                    <button class="btn-city-save" >+</button>
+                {{/if}}
+                <span class="city-name">{{name}}</span>   
+                <span class="city-temp">{{temperature}} C</span>
+                <img src="https://openweathermap.org/img/wn/{{conditionPic}}@2x.png" class="weather-icon"/>
+                <span class="city-condition" style="font-size:medium ;">{{condition}}</span>
+                <button class="btn-city-delete" >-</button>
+            </div>
+            <div>
+                <button class="btn-refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+            </div>
+        </div>
+
+        {{/each}}
+    </script>
+            
+    <div id="container">
+        <div id="grid-header">
+            <input type="text" placeholder="City Name" />
+            <div id="btn-city-search"> Search</div>
+        </div>
+
+        <div id="grid-body">
+            
+        </div>
+    </div>
+  
+    
+</body>
+<script src="jquery/dist/jquery.js"></script>
+<script src="handlebars/dist/handlebars.js"></script>
+<script src="Model.js"></script>
+<script src="Renderer.js"></script>
+<script src="main.js"></script>
+</html>
