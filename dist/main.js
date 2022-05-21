@@ -26,7 +26,8 @@ const saveCity = function () {
    const city = model.cityData.find( city => city.name === cityName)
    model.saveCity(city)
    .then( data => {
-    console.log(data)
+        console.log($(this).closest(`div`).find(`.btn-city-save`).first().remove())
+        console.log(data)
    })
    
 }

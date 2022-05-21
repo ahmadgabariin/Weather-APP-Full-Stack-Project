@@ -17,13 +17,13 @@
             <div class="city" data-id="{{_id}}">
                 {{#if _id}}
                 {{else}}
-                    <button class="btn-city-save" >+</button>
+                    <button class="btn-city-save" ><i class="fa-solid fa-floppy-disk"></i></button>
                 {{/if}}
                 <span class="city-name">{{name}}</span>   
                 <span class="city-temp">{{temperature}} C</span>
                 <img src="https://openweathermap.org/img/wn/{{conditionPic}}@2x.png" class="weather-icon"/>
                 <span class="city-condition" style="font-size:medium ;">{{condition}}</span>
-                <button class="btn-city-delete" >-</button>
+                <button class="btn-city-delete" ><i class="fa-solid fa-trash-can"></i></button>
             </div>
             <div>
                 <button class="btn-refresh"><i class="fa-solid fa-arrows-rotate"></i></button>

@@ -59,15 +59,13 @@ router.put(`/city/:cityName` , function (request , response) {
     updateCity(cityName)
     .then(function (city) {
         if(city) {
-            console.log(city)
             for(key of Object.keys(updatedCity)) {
                 city[key] = updatedCity[key]
             }  
             city.save()
             response.send(city)
             response.end()
-        }
-        else {
+        }else {
             response.send(updatedCity)
             response.end()
         }

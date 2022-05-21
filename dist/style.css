@@ -62,16 +62,16 @@ input {
 }
 
 .btn-city-save {
-    background-color: green;
-    border-radius: 50%;
-    
+   background: none;
+   border: none;    
+   font-size: medium;
 }
 
 .btn-city-delete {
     margin-top: 1vh;
-    background-color: red;
-    border-radius: 50%;
-    
+    background: none;
+    border: none;
+    font-size: medium;
 }
 
 .city > span{
