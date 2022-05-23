@@ -33,7 +33,7 @@ router.post(`/city` , function (request , response) {
     const cityOBJ = request.body
     new City(cityOBJ).save()
     .then( city => {
-        response.send(`${city.name} has been saved successfully !`)
+        response.status(201).send(`${city.name} has been saved successfully !`)
         response.end()
     })
 
@@ -43,7 +43,7 @@ router.delete(`/city/:id` , function(request , response) {
     const id = request.params.id
     City.findByIdAndRemove(id)
     .exec( function (error , city) {
-        city ? response.status(200).send(`${city.naem} has been removed`) : response.status(404).send(`Not found!`)
+        city ? response.status(202).send(`${city.naem} has been removed`) : response.status(404).send(`Not found!`)
         response.end()
     } )
     
@@ -63,10 +63,10 @@ router.put(`/city/:cityName` , function (request , response) {
                 city[key] = updatedCity[key]
             }  
             city.save()
-            response.send(city)
+            response.status(202).send(city)
             response.end()
         }else {
-            response.send(updatedCity)
+            response.status(202).send(updatedCity)
             response.end()
         }
     })
